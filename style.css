@@ -1,0 +1,195 @@
+/* CONFIGURATION GÉNÉRALE */
+html { scroll-behavior: smooth; }
+body { background-color: #FAF9F6; color: #002147; position: relative; }
+
+/* GRAIN DE PAPIER PRESTIGE */
+body::before {
+    content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0.04; z-index: 9999; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ANIMATIONS REVEAL */
+.reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* DESIGN DES CARTES */
+.card-hover {
+    transition: all 0.5s ease;
+    border: 1px solid rgba(157, 132, 82, 0.1);
+}
+.card-hover:hover {
+    border-color: #9D8452; transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 33, 71, 0.05);
+}
+
+.skill-badge {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+.skill-badge:hover { border-color: #9D8452; background: rgba(157, 132, 82, 0.1); }
+
+/* NAVBAR SCROLL */
+nav.scrolled {
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    padding-top: 1rem; padding-bottom: 1rem;
+}
+
+/* MODALES */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 33, 71, 0.96); backdrop-filter: blur(8px); z-index: 10000;
+    align-items: center; justify-content: center;
+}
+.modal-content {
+    background: #FAF9F6; max-width: 600px; width: 90%; padding: 3rem;
+    border: 1px solid #9D8452; position: relative;
+}
+.modal-close {
+    position: absolute; top: 1rem; right: 1.5rem;
+    color: #9D8452; cursor: pointer; font-size: 2rem;
+}
+@keyframes reveal {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.reveal.active .animate-reveal {
+    animation: reveal 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) forwards;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Curseur clignotant pour la machine à écrire */
+#typewriter {
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #9D8452; }
+}
+/* DESIGN DES CARTES ANIMÉES */
+.skill-card-wrapper {
+    perspective: 1000px;
+}
+
+.skill-card-animated {
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(157, 132, 82, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remplissage Doré au Hover (comme ton accueil) */
+.card-bg-fill {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(157, 132, 82, 0.4), transparent);
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+.skill-card-animated:hover .card-bg-fill {
+    left: 100%;
+}
+
+.skill-card-animated:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #9D8452;
+    box-shadow: 0 10px 30px rgba(157, 132, 82, 0.15);
+    background: rgba(157, 132, 82, 0.05);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.skill-icon {
+    font-size: 1.5rem;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+.skill-card-animated:hover .skill-icon {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+
+.skill-text {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Texte qui apparaît uniquement au hover */
+.view-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    color: #9D8452;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.skill-card-animated:hover .view-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+.skill-card-animated {
+    position: relative;
+    width: 100%;
+    min-height: 140px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(157, 132, 82, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card-bg-fill {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(157, 132, 82, 0.1), transparent);
+    transition: 0.6s ease;
+}
+.skill-card-animated:hover .card-bg-fill { left: 100%; }
+.skill-card-animated:hover { border-color: #9D8452; transform: translateY(-5px); }
+/* --- EFFET FADE (FONDU) --- */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}

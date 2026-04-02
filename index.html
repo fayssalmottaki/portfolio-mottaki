@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fayssal Mottaki | Portfolio BTS SISR 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandCream: '#FAF9F6',
+                        brandNavy: '#002147',
+                        brandGold: '#9D8452',
+                        brandDark: '#0a0a0a',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased bg-brandCream text-brandNavy">
+
+    <nav class="fixed top-0 w-full z-50 px-10 py-6 flex justify-between items-center mix-blend-difference text-white border-b border-white/5 bg-black/5 backdrop-blur-sm transition-all duration-500">
+        <div class="text-2xl font-serif tracking-tighter italic">F.M.</div>
+        <ul class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-semibold">
+            <li><a href="#accueil" class="hover:text-brandGold transition">Accueil</a></li>
+            <li><a href="#a-propos" class="hover:text-brandGold transition">À Propos / CV</a></li>
+            <li><a href="#maitrise" class="hover:text-brandGold transition">Expertise</a></li>
+            <li><a href="#projets" class="hover:text-brandGold transition">Réalisations</a></li>
+            <li><a href="#veille" class="hover:text-brandGold transition">Veille Cyber</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil" class="relative h-screen flex items-center justify-center overflow-hidden bg-brandNavy text-white">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brandNavy/50 z-10"></div>
+        <div class="absolute inset-0 opacity-40 parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000');"></div>
+        <div class="relative z-20 text-center px-6">
+            <h1 class="font-serif text-7xl md:text-9xl mb-4 tracking-tighter animate-[fadeInUp_1s_ease-out]">FAYSSAL MOTTAKI</h1>
+            <div class="h-px w-24 bg-brandGold mx-auto mb-8 shadow-[0_0_15px_#9D8452]"></div>
+            <div class="h-8 mb-12 italic"><h2 id="typewriter" class="text-sm md:text-xl font-light tracking-[0.4em] uppercase text-brandGold inline-block border-r-2 border-brandGold pr-2"></h2></div>
+            <div class="mt-8 opacity-0 animate-[fadeIn_1s_ease-out_2s_forwards]">
+                <a href="#projets" class="group relative inline-block px-12 py-4 border border-brandGold/50 overflow-hidden transition-all duration-500 hover:border-brandGold shadow-lg">
+                    <span class="relative z-10 text-[10px] uppercase tracking-[0.3em] font-bold group-hover:text-brandNavy transition-colors duration-500 text-white">Explorer mes réalisations</span>
+                    <div class="absolute inset-0 bg-brandGold -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50"><span class="text-[8px] uppercase tracking-[0.5em] rotate-90 mb-8 font-bold text-white">Scroll</span><div class="w-[1px] h-16 bg-gradient-to-b from-brandGold to-transparent"></div></div>
+    </section>
+
+    <section id="a-propos" class="py-32 px-6 bg-brandDark text-white reveal text-left">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
+            <div class="lg:w-1/3 space-y-6">
+                <div class="bg-[#111111] border border-white/10 rounded-2xl p-8 sticky top-32 shadow-2xl">
+                    <div class="w-32 h-32 bg-brandGold/10 border-2 border-brandGold rounded-full mx-auto flex items-center justify-center mb-6"><span class="text-4xl font-serif text-brandGold font-bold italic">FM</span></div>
+                    <div class="text-center mb-8"><h2 class="text-3xl font-serif mb-1 italic">Fayssal Mottaki</h2><p class="text-brandGold text-xs uppercase tracking-widest font-semibold italic">19 ans • Étudiant BTS SISR</p></div>
+                    <div class="space-y-4 border-t border-white/5 pt-8 text-sm opacity-70 italic font-light">
+                        <p>📍 Lyon, France</p><p>📧 fayssalmottaki@outlook.fr</p><p>🎓 Bac Pro SN (Lycée Louis Armand)</p>
+                    </div>
+                    <div class="mt-8 bg-white/5 p-5 rounded-xl border border-white/5 text-pretty text-left">
+                        <p class="text-brandGold text-[10px] uppercase tracking-widest mb-3 font-bold italic">Mon ADN Pro</p>
+                        <p class="text-xs leading-relaxed opacity-80 italic">"Passionné par l'architecture réseau, j'allie mon bagage technique de Bac Pro à l'expertise système du BTS pour concevoir des infrastructures virtualisées, sécurisées et résilientes."</p>
+                    </div>
+                    <a href="CV_MOTTAKI Fayssal.pdf" target="_blank" class="mt-8 block text-center bg-brandGold hover:bg-brandGold/80 text-brandNavy py-4 rounded-xl transition duration-300 text-sm font-bold uppercase tracking-tighter italic cursor-pointer relative z-30">Télécharger mon CV (PDF)</a>
+                </div>
+            </div>
+            <div class="lg:w-2/3 space-y-10 italic">
+                <div class="bg-[#111111] border border-white/10 rounded-2xl p-10 shadow-2xl italic">
+                    <div class="mb-12 italic"><h3 class="text-4xl font-serif mb-4 italic">Parcours Académique</h3><div class="h-1 w-20 bg-brandGold italic"></div></div>
+                    <div class="space-y-12 italic">
+                        <div class="relative pl-8 border-l border-brandGold/30 italic">
+                            <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-brandGold rounded-full shadow-[0_0_10px_#9D8452] italic"></div>
+                            <div class="flex flex-col md:flex-row justify-between mb-2 italic"><h4 class="text-xl font-serif text-brandGold italic">BTS SIO - Option SISR</h4><span class="text-xs opacity-50 font-mono italic">2023 - 2026</span></div>
+                            <p class="text-sm opacity-80 mb-4 italic">Lycée La Martinière Duchère • Lyon</p>
+                            <p class="text-sm font-light leading-relaxed opacity-70 mb-6 text-pretty italic">Spécialisation dans les infrastructures, les systèmes et les réseaux. Apprentissage de la virtualisation, de l'administration Windows/Linux et de la cybersécurité.</p>
+                        </div>
+                        <div class="relative pl-8 border-l border-white/10 italic">
+                            <div class="absolute -left-[5px] top-0 w-[9px] h-[9px] bg-white/20 rounded-full italic"></div>
+                            <div class="flex flex-col md:flex-row justify-between mb-2 italic"><h4 class="text-xl font-serif italic">Bac Pro Système Numérique (SN)</h4><span class="text-xs opacity-50 font-mono italic">2020 - 2023</span></div>
+                            <p class="text-sm opacity-80 mb-2 italic">Lycée Louis Armand • Villefranche-sur-Saône</p>
+                            <p class="text-sm font-light opacity-70 text-pretty italic">Major de promotion. Acquisition des bases fondamentales : câblage, maintenance de premier niveau et services numériques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="maitrise" class="py-32 px-10 bg-brandDark text-white reveal border-y border-brandGold/20">
+        <div class="max-w-7xl mx-auto text-center italic">
+            <h3 class="font-serif text-5xl mb-4 italic text-brandGold italic">Ce que je maîtrise</h3>
+            <p class="text-white/40 text-[10px] uppercase tracking-[0.5em] mb-16 italic font-bold italic text-pretty italic">Survolez pour visualiser / Cliquez pour l'explication</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 italic">
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('windows')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">🔑</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Windows Server / AD</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('linux')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">🐧</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Linux (Debian/Ubuntu)</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('powershell')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">📜</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Scripting PowerShell</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('hyperv')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">💻</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Virtualisation Hyper-V</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('cyber')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">🛡️</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Cybersécurité</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('reseaux')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">🌐</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Réseaux TCP/IP</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('glpi')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">🎟️</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">GLPI / Ticketing</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+                <div class="skill-card-wrapper italic"><button onclick="openSkillModal('prtg')" class="skill-card-animated group italic"><div class="card-bg-fill italic"></div><div class="card-content italic"><span class="skill-icon text-2xl mb-2 block italic">📊</span><span class="skill-text text-[10px] uppercase tracking-widest font-bold italic">Supervision PRTG</span><div class="view-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[8px] uppercase text-brandGold mt-2 italic font-bold">Visualiser l'expertise</div></div></button></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="bg-brandNavy py-32 px-10 text-white reveal">
+        <div class="max-w-7xl mx-auto italic">
+            <div class="text-center mb-24 italic"><span class="text-brandGold text-xs uppercase tracking-[0.4em] italic">Opérations Professionnelles</span><h3 class="font-serif text-6xl mt-6 italic text-pretty italic">Missions Documentées</h3></div>
+            <div class="mb-32 italic">
+                <h4 class="font-serif text-3xl text-brandGold italic mb-12 border-b border-white/10 pb-4 italic">Activités Professionnelles (AP)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-balance text-left italic">
+                    <div class="p-8 border border-white/10 bg-white/5 hover:border-brandGold transition group rounded-lg italic"><h5 class="text-2xl font-serif mb-4 italic text-white">Men-In-The-Middle (MITM)</h5><button onclick="openModal('mitm')" class="text-[10px] uppercase tracking-widest border-b border-brandGold pb-1 hover:text-brandGold transition font-bold shadow-[0_0_10px_#9d845244]">Consulter</button></div>
+                    <div class="p-8 border border-white/10 bg-white/5 hover:border-brandGold transition group rounded-lg italic"><h5 class="text-2xl font-serif mb-4 italic text-brandGold underline decoration-brandGold underline-offset-8">HAProxy Load Balancing</h5><button onclick="openModal('haproxy')" class="text-[10px] uppercase tracking-widest border-b border-brandGold pb-1 hover:text-brandGold transition font-bold">Consulter</button></div>
+                    <div class="p-8 border border-white/10 bg-white/5 hover:border-brandGold transition group rounded-lg italic"><h5 class="text-2xl font-serif mb-4 italic text-white">PRTG Supervision Réseau</h5><button onclick="openModal('prtg-ap')" class="text-[10px] uppercase tracking-widest border-b border-brandGold pb-1 hover:text-brandGold transition font-bold">Consulter</button></div>
+                    <div class="p-8 border border-white/10 bg-white/5 hover:border-brandGold transition group rounded-lg italic"><h5 class="text-2xl font-serif mb-4 italic text-white">Installation Serveur Web</h5><button onclick="openModal('lamp')" class="text-[10px] uppercase tracking-widest border-b border-brandGold pb-1 hover:text-brandGold transition font-bold">Consulter</button></div>
+                </div>
+            </div>
+
+            <div class="text-left italic">
+                <h4 class="font-serif text-3xl text-brandGold italic mb-12 border-b border-brandGold/30 pb-4 italic">Situations Professionnelles (Stages E5)</h4>
+                <div class="grid grid-cols-1 gap-12 italic">
+                    
+                    <div class="p-10 border border-brandGold/50 bg-black/30 hover:border-brandGold transition group rounded-2xl shadow-2xl relative overflow-hidden italic">
+                        <div class="absolute top-0 right-0 p-6 italic"><span class="bg-brandGold text-brandNavy text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest animate-pulse italic">Projet WAN AWR</span></div>
+                        <div class="flex flex-col lg:flex-row gap-10 items-start italic">
+                            <div class="lg:w-2/3 italic">
+                                <span class="text-[10px] text-brandGold uppercase tracking-widest mb-4 block font-bold italic">Client VIP : ALDI International (Site Bron)</span>
+                                <h5 class="text-3xl font-serif mb-6 italic text-white">Migration Infrastructure WAN Critique</h5>
+                                <p class="text-sm text-white/70 mb-8 leading-relaxed font-light italic text-pretty text-left">Remplacement complet de l'architecture réseau obsolète par une solution standardisée Cisco/Meraki. Garantie de zéro downtime pour les systèmes de paiement NFC et la gestion des stocks GFOS.</p>
+                                <div class="flex flex-wrap gap-4 italic">
+                                    <button onclick="openModal('aldi')" class="text-[10px] uppercase tracking-widest bg-brandGold text-brandNavy px-8 py-3 font-bold hover:scale-105 transition shadow-lg italic">Détails Intervention</button>
+                                    <a href="Acceptancedocument_FR (1).pdf" target="_blank" class="text-[10px] uppercase tracking-widest border border-brandGold px-8 py-3 font-bold text-brandGold hover:bg-brandGold/10 transition italic flex items-center gap-2"><span>📄 PV d'Acceptation (Preuve)</span></a>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/3 bg-white/5 p-6 rounded-xl border border-white/10 italic">
+                                <p class="text-brandGold text-[10px] uppercase font-bold mb-4 tracking-widest italic text-center font-bold">Équipements Déployés</p>
+                                <ul class="text-[11px] space-y-3 opacity-80 italic">
+                                    <li>• Routeur Cisco 1126 (Core)</li>
+                                    <li>• 2x Switchs Cisco Meraki MS120</li>
+                                    <li>• Segmentation VLAN (POS/STOCK/CRYPTO)</li>
+                                    <li>• Redondance WAN (VDSL + LTE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-10 border border-white/20 bg-black/30 hover:border-brandGold transition group rounded-2xl shadow-2xl relative overflow-hidden mt-12 italic">
+                        <div class="absolute top-0 right-0 p-6 italic"><span class="bg-white/10 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest italic font-bold">Intervention UNYC</span></div>
+                        <div class="flex flex-col lg:flex-row gap-10 items-start italic">
+                            <div class="lg:w-2/3 italic">
+                                <span class="text-[10px] text-brandGold uppercase tracking-widest mb-4 block font-bold italic">Client : Jubil Villefranche | UNYC-Waycom</span>
+                                <h5 class="text-3xl font-serif mb-6 italic text-white font-bold">Déploiement Fibre & Téléphonie IP (VoIP)</h5>
+                                <p class="text-sm text-white/70 mb-8 leading-relaxed font-light italic text-pretty text-left italic">Installation d'un routeur Huawei AR617 avec basculement automatique 4G (remplacement carte SIM) et déploiement de postes SIP Fanvil V64.</p>
+                                <div class="flex flex-wrap gap-4 italic">
+                                    <button onclick="openModal('unyc')" class="text-[10px] uppercase tracking-widest bg-brandGold text-brandNavy px-8 py-3 font-bold hover:scale-105 transition shadow-lg italic">Détails Techniques</button>
+                                    <a href="ODM_O280404-PWGX6_02_02_26_09_48.pdf" target="_blank" class="text-[10px] uppercase tracking-widest border border-white/30 px-6 py-3 font-bold text-white hover:border-brandGold transition italic">📄 Bon d'intervention</a>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/3 bg-white/5 p-6 rounded-xl border border-white/10 italic text-left">
+                                <p class="text-brandGold text-[10px] uppercase font-bold mb-4 tracking-widest text-center italic font-bold">Hardware Déployé</p>
+                                <ul class="text-[11px] space-y-3 opacity-80 italic">
+                                    <li>• Routeur Huawei AR617VW</li>
+                                    <li>• Backup LTE 4G (Secours)</li>
+                                    <li>• 2x Téléphones IP Fanvil V64</li>
+                                    <li>• Migration DMZ Routeur Client</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-10 border border-white/20 bg-black/30 hover:border-brandGold transition group rounded-2xl shadow-2xl relative overflow-hidden mt-12 italic">
+                        <div class="absolute top-0 right-0 p-6 italic"><span class="bg-white/10 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest italic font-bold">Mise en route Poste</span></div>
+                        <div class="flex flex-col lg:flex-row gap-10 items-start italic">
+                            <div class="lg:w-2/3 italic">
+                                <span class="text-[10px] text-brandGold uppercase tracking-widest mb-4 block font-bold">Client : Groupe Randstad France | Prestataire : Infodis</span>
+                                <h5 class="text-3xl font-serif mb-6 italic text-white font-bold">Déploiement Poste & Sécurisation Zscaler</h5>
+                                <p class="text-sm text-white/70 mb-8 leading-relaxed font-light italic text-pretty text-left">Installation du nouveau poste HP 440 G9, transfert sécurisé des données utilisateur par réseau et mise en conformité via le proxy cloud Zscaler.</p>
+                                <div class="flex flex-wrap gap-4">
+                                    <button onclick="openModal('randstad')" class="text-[10px] uppercase tracking-widest bg-brandGold text-brandNavy px-8 py-3 font-bold hover:scale-105 transition shadow-lg italic">Détails techniques</button>
+                                    <a href="fichemission (1).pdf" target="_blank" class="text-[10px] uppercase tracking-widest border border-white/30 px-6 py-3 font-bold text-white hover:border-brandGold transition italic">📄 Fiche de Mission</a>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/3 bg-white/5 p-6 rounded-xl border border-white/10 text-left">
+                                <p class="text-brandGold text-[10px] uppercase font-bold mb-4 tracking-widest text-center font-bold">Hardware & Sécurité</p>
+                                <ul class="text-[11px] space-y-3 opacity-80 italic">
+                                    <li>• PC HP 440 G9 (Asset Randstad)</li>
+                                    <li>• Transfert de données (IP réseau)</li>
+                                    <li>• Inscription Domaine Active Directory</li>
+                                    <li>• Proxy Cloud Zscaler ZIA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-10 border border-white/20 bg-black/30 hover:border-brandGold transition group rounded-2xl shadow-2xl relative overflow-hidden mt-12 italic">
+                        <div class="absolute top-0 right-0 p-6 italic"><span class="bg-white/10 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest italic font-bold">Audit & Hardening</span></div>
+                        <div class="flex flex-col lg:flex-row gap-10 items-start italic">
+                            <div class="lg:w-2/3 italic">
+                                <span class="text-[10px] text-brandGold uppercase tracking-widest mb-4 block font-bold italic">Client : MMA Assurances | Projet : Remise en conformité Infra</span>
+                                <h5 class="text-3xl font-serif mb-6 italic text-white font-bold italic">Optimisation et Sécurisation Physique de Baie</h5>
+                                <p class="text-sm text-white/70 mb-8 leading-relaxed font-light italic text-pretty text-left">Audit technique de l'infrastructure locale, curage des liaisons obsolètes et réorganisation complète du brassage pour optimiser le flux d'air (Airflow) et la maintenabilité réseau.</p>
+                                <div class="flex flex-wrap gap-4 italic">
+                                    <button onclick="openModal('mma')" class="text-[10px] uppercase tracking-widest bg-brandGold text-brandNavy px-8 py-3 font-bold hover:scale-105 transition shadow-lg italic">Détails techniques</button>
+                                    <a href="PV MMA.pdf" target="_blank" class="text-[10px] uppercase tracking-widest border border-white/30 px-6 py-3 font-bold text-white hover:border-brandGold transition italic">📄 Rapport d'intervention</a>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/3 bg-white/5 p-6 rounded-xl border border-white/10 text-left">
+                                <p class="text-brandGold text-[10px] uppercase font-bold mb-4 tracking-widest text-center font-bold">Objectifs Réalisés</p>
+                                <ul class="text-[11px] space-y-3 opacity-80 italic">
+                                    <li>• Curage de câblage (Sanitization)</li>
+                                    <li>• Identification des liens critiques</li>
+                                    <li>• Étiquetage conforme aux normes</li>
+                                    <li>• Réduction du MTTR (Temps de réparation)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille" class="py-32 px-10 bg-brandCream border-t border-brandGold/20 reveal italic">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-start text-left italic">
+            <div class="lg:w-2/5 italic">
+                <span class="text-brandGold text-xs font-mono uppercase tracking-[0.4em] block mb-4 italic font-bold">Cyber-Intelligence 2026</span>
+                <h3 class="font-serif text-6xl text-brandNavy italic leading-tight mb-8 italic font-bold">L'IA au service de la <span class="text-brandGold underline decoration-1 underline-offset-8">Cyber-Défense</span></h3>
+                <p class="text-brandNavy/80 text-lg leading-relaxed italic mb-10 text-pretty">"Ma veille porte sur l'<strong>AIOps</strong> et le <strong>Threat Hunting</strong> : comment l'Intelligence Artificielle permet de détecter des menaces invisibles à l'humain."</p>
+                <div class="p-8 bg-white border border-brandGold/30 rounded-xl shadow-lg relative overflow-hidden italic"><div class="flex justify-between items-center mb-6 italic font-bold"><span class="text-[10px] font-bold text-brandNavy uppercase tracking-widest italic">Flux d'analyse IA</span><div class="w-2 h-2 bg-green-500 rounded-full animate-pulse italic"></div></div><div class="space-y-6 italic"><div class="flex items-center gap-4 italic"><div class="w-10 h-10 bg-brandNavy rounded-lg flex items-center justify-center text-white text-xs italic">LOGS</div><div class="flex-1 h-[2px] bg-brandGold/20 relative italic font-bold"><div class="absolute inset-y-0 left-0 bg-brandGold w-2/3 italic"></div></div><div class="w-10 h-10 bg-brandGold rounded-lg flex items-center justify-center text-brandNavy font-bold text-xs italic font-bold">IA</div></div><div class="bg-brandNavy/5 p-4 rounded-lg italic"><p class="text-[9px] font-mono text-brandNavy/60 uppercase mb-2 italic">Analyse Prédictive</p><div class="h-2 bg-gray-200 rounded-full overflow-hidden italic"><div class="h-full bg-brandGold w-[88%] italic"></div></div><p class="text-[9px] mt-2 text-right text-brandGold font-bold italic font-bold">Confiance : 88%</p></div></div></div>
+                <a href="veille.pdf" target="_blank" class="mt-10 inline-flex items-center gap-3 bg-brandNavy text-white px-8 py-4 rounded-xl hover:bg-brandGold transition-all font-bold uppercase text-[10px] tracking-widest shadow-xl italic font-bold"><span>Ouvrir le rapport de veille (PDF)</span></a>
+            </div>
+            <div class="lg:w-3/5 space-y-12 italic">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty text-left italic">
+                    <div class="p-10 bg-brandNavy text-white border-t-4 border-brandGold shadow-2xl italic"><h4 class="font-serif text-2xl mb-6 italic text-brandGold italic font-bold">Axe 1 : AIOps</h4><ul class="space-y-4 text-xs opacity-80 list-none border-l border-white/10 pl-6 italic font-bold"><li>• Automatisation de l'analyse des logs</li><li>• Corrélation d'événements en temps réel</li></ul></div>
+                    <div class="p-10 bg-white border border-brandNavy/10 border-t-4 border-brandNavy shadow-xl text-brandNavy italic"><h4 class="font-serif text-2xl mb-6 italic font-bold">Axe 2 : Threat Hunting</h4><ul class="space-y-4 text-xs text-brandNavy/70 list-none border-l border-brandNavy/10 pl-6 font-bold italic font-bold"><li>• Chasse proactive aux menaces invisibles</li><li>• ML pour réduire les faux positifs</li></ul></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-10 border-t border-brandNavy/10 bg-white reveal italic font-bold text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 font-bold italic"><div class="font-serif text-3xl italic text-brandNavy underline decoration-brandGold decoration-1 underline-offset-8 italic">Fayssal Mottaki</div><div class="text-[10px] text-gray-400 font-mono uppercase tracking-widest italic">© 2026 BTS SISR | Expertise Infrastructure</div></div>
+    </footer>
+
+    <div id="modal-mma" class="modal-overlay italic">
+        <div class="modal-content reveal active text-pretty italic text-left max-h-[85vh] overflow-y-auto">
+            <span class="modal-close" onclick="closeModal('mma')">&times;</span>
+            <span class="text-brandGold text-[10px] font-mono uppercase tracking-[0.3em] font-bold italic">Expertise Infrastructure - 2026</span>
+            <h3 class="font-serif text-3xl mt-4 mb-6 italic text-brandNavy font-bold italic">Hardening Physique & Brassage MMA</h3>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="space-y-2 text-center italic"><img src="baie-mma.jpg" class="rounded-lg shadow-md border border-brandGold/20 italic" alt="Audit brassage"><p class="text-[9px] opacity-60 italic">Audit du brassage existant</p></div>
+                <div class="space-y-2 text-center italic"><img src="baie-mma1.jpg" class="rounded-lg shadow-md border border-brandGold/20 italic" alt="Finalisation"><p class="text-[9px] opacity-60 italic">Finalisation et repérage</p></div>
+            </div>
+            <div class="space-y-6 text-sm text-gray-700 leading-relaxed font-light italic">
+                <div class="bg-brandNavy/5 p-4 border-l-4 border-brandGold italic font-bold"><p class="font-bold text-brandNavy mb-1">Constat & Problématique</p><p>La baie informatique présentait un désordre critique (Spaghetti Cabling) obstruant la ventilation des équipements actifs.</p></div>
+                <div><p class="font-bold text-brandNavy mb-1">Actions Correctives</p><p>Réorganisation par codes couleurs des jarretières, curage des liaisons obsolètes et mise en conformité de l'étiquetage.</p></div>
+            </div>
+            <a href="PV MMA.pdf" target="_blank" class="mt-8 block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic shadow-lg">Voir le PV d'intervention (PDF)</a>
+        </div>
+    </div>
+
+    <div id="modal-randstad" class="modal-overlay">
+        <div class="modal-content reveal active text-pretty italic text-left max-h-[85vh] overflow-y-auto">
+            <span class="modal-close" onclick="closeModal('randstad')">&times;</span>
+            <span class="text-brandGold text-[10px] font-mono uppercase tracking-[0.3em]">Situation E5 - 2026</span>
+            <h3 class="font-serif text-3xl mt-4 mb-6 italic text-brandNavy font-bold">Installation de Poste & proxy Zscaler</h3>
+            <div class="space-y-6 text-sm text-gray-700 leading-relaxed font-light italic">
+                <div class="bg-brandNavy/5 p-4 border-l-4 border-brandGold italic">
+                    <p class="font-bold text-brandNavy mb-1 font-bold">Déploiement Matériel</p>
+                    <p>Mise en service d'un laptop <strong>HP 440 G9</strong>. Transfert de l'intégralité du profil utilisateur et des données métiers via le réseau interne.</p>
+                </div>
+            </div>
+            <a href="Procedure-RANDSTAD et Zscaler.pdf" target="_blank" class="mt-8 block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic shadow-lg">Ouvrir la Procédure de configuration (PDF)</a>
+        </div>
+    </div>
+
+    <div id="modal-unyc" class="modal-overlay">
+        <div class="modal-content reveal active text-pretty italic text-left max-h-[85vh] overflow-y-auto">
+            <span class="modal-close" onclick="closeModal('unyc')">&times;</span>
+            <span class="text-brandGold text-[10px] font-mono uppercase tracking-[0.3em]">Situation E5 - 2026</span>
+            <h3 class="font-serif text-3xl mt-4 mb-6 italic text-brandNavy font-bold font-bold">Déploiement Routeur Huawei & VoIP Fanvil</h3>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="space-y-2 text-center"><img src="IMG_5189.jpeg" class="rounded-lg shadow-md border border-brandGold/20" alt="Installation baie"><p class="text-[9px] opacity-60">Installation en baie</p></div>
+                <div class="space-y-2 text-center"><img src="IMG_5184.jpeg" class="rounded-lg shadow-md border border-brandGold/20" alt="Interface configuration"><p class="text-[9px] opacity-60">Interface Huawei Platform</p></div>
+            </div>
+            <div class="space-y-6 text-sm text-gray-700 leading-relaxed font-light italic"><div class="bg-brandNavy/5 p-4 border-l-4 border-brandGold"><p class="font-bold text-brandNavy mb-1 font-bold">Mise en œuvre Réseau</p><p>Installation du routeur Huawei AR617 sur FTTH. Configuration du secours 4G automatique.</p></div></div>
+            <a href="CR_Intervention_E5_Jubil_Villefranche.pdf" target="_blank" class="mt-8 block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic shadow-lg">Ouvrir le Compte-Rendu (PDF)</a>
+        </div>
+    </div>
+
+    <div id="modal-aldi" class="modal-overlay">
+        <div class="modal-content reveal active text-pretty italic text-left max-h-[85vh] overflow-y-auto">
+            <span class="modal-close" onclick="closeModal('aldi')">&times;</span>
+            <span class="text-brandGold text-[10px] font-mono uppercase tracking-[0.3em]">Dossier Technique E5</span>
+            <h3 class="font-serif text-3xl mt-4 mb-6 italic text-brandNavy italic font-bold">Migration WAN - VIP Client ALDI nord</h3>
+            
+            <div class="grid grid-cols-3 gap-2 mb-8 italic">
+                <img src="baie-Aldi.jpeg" class="rounded-lg shadow-md border border-brandGold/20 h-32 w-full object-cover" alt="Baie Aldi 1">
+                <img src="baie-Aldi1.jpeg" class="rounded-lg shadow-md border border-brandGold/20 h-32 w-full object-cover" alt="Baie Aldi 2">
+                <img src="baie-Aldi2.jpeg" class="rounded-lg shadow-md border border-brandGold/20 h-32 w-full object-cover" alt="Baie Aldi 3">
+            </div>
+
+            <div class="space-y-6 text-sm text-gray-700 leading-relaxed font-light italic">
+                <div class="bg-brandNavy/5 p-4 border-l-4 border-brandGold"><p class="font-bold text-brandNavy mb-1">Mission Reçue</p><p>Migrer l'infrastructure WAN obsolète vers une architecture standardisée AWR. Remplacement hardware et basculement critique sans interruption autorisée.</p></div>
+                <div><p class="font-bold text-brandNavy mb-1">Actions Techniques Clés</p><ul class="list-disc ml-4 space-y-2"><li>Remplacement hardware : Routeur <strong>Cisco 1126</strong> et 2 switchs <strong>Meraki MS120-48LP</strong>.</li><li>Segmentation L2/L3 : Caisses (VLAN 10), Gestion stocks (VLAN 20), CashManagement (VLAN 30).</li></ul></div>
+            </div>
+            <a href="Acceptancedocument_FR (1).pdf" target="_blank" class="mt-8 block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic shadow-lg">Consulter le PV Signé (PDF)</a>
+        </div>
+    </div>
+
+    <div id="modal-mitm" class="modal-overlay"><div class="modal-content reveal active text-left"><span class="modal-close" onclick="closeModal('mitm')">&times;</span><h3 class="font-serif text-3xl mb-6 text-brandNavy font-bold">Attaque MITM</h3><a href="TP_MITM_SSH_Rapport_Professionnel.pdf" target="_blank" class="block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic">Ouvrir le PDF</a></div></div>
+    <div id="modal-haproxy" class="modal-overlay"><div class="modal-content reveal active text-left"><span class="modal-close" onclick="closeModal('haproxy')">&times;</span><h3 class="font-serif text-3xl mb-6 text-brandNavy font-bold">HAProxy</h3><a href="mottaki-CR-haproxy.pdf" target="_blank" class="block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic">Ouvrir le PDF</a></div></div>
+    <div id="modal-prtg-ap" class="modal-overlay"><div class="modal-content reveal active text-left"><span class="modal-close" onclick="closeModal('prtg-ap')">&times;</span><h3 class="font-serif text-3xl mb-6 text-brandNavy font-bold">Supervision PRTG</h3><a href="Rapport_PRTG_Supervision.pdf" target="_blank" class="block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic">Ouvrir le PDF</a></div></div>
+    <div id="modal-lamp" class="modal-overlay"><div class="modal-content reveal active text-left"><span class="modal-close" onclick="closeModal('lamp')">&times;</span><h3 class="font-serif text-3xl mb-6 text-brandNavy font-bold">Installation LAMP</h3><a href="Rapport_Serveur_LAMP.pdf" target="_blank" class="block w-full bg-brandNavy text-white text-center py-4 uppercase text-[10px] font-bold italic">Ouvrir le PDF</a></div></div>
+
+    <div id="skill-modal" class="modal-overlay"><div class="modal-content reveal active text-left italic"><span class="modal-close" onclick="closeSkillModal()">&times;</span><span id="skill-category" class="text-brandGold text-[10px] uppercase"></span><h3 id="skill-title" class="font-serif text-4xl mt-4 mb-6 italic text-brandNavy font-bold"></h3><div class="space-y-6 text-gray-700 italic"><div class="bg-brandNavy/5 p-6 rounded-xl border-l-4 border-brandGold italic"><p id="skill-simple" class="text-sm"></p></div><p id="skill-vital" class="text-sm font-light text-brandNavy"></p></div><button onclick="closeSkillModal()" class="mt-10 block w-full bg-brandNavy text-white py-4 font-bold italic">Fermer</button></div></div>
+
+    <script src="script.js"></script>
+    <script>
+        const skillData = {
+            windows: { title: "Windows Server & AD", simple: "C'est comme le 'cerveau' de l'entreprise. Il gère tous les comptes des employés.", vital: "Sans lui, l'administrateur devrait configurer chaque PC un par un." },
+            linux: { title: "Linux (Debian/Ubuntu)", simple: "C'est un moteur robuste et gratuit. Idéal pour faire tourner des serveurs web sans jamais bugger.", vital: "C'est la base de la stabilité mondiale sur Internet." },
+            powershell: { title: "Scripting PowerShell", simple: "C'est écrire des 'ordres' pour que l'ordinateur travaille tout seul à ma place.", vital: "On gagne un temps fou sur les tâches répétitives." },
+            hyperv: { title: "Virtualisation Hyper-V", simple: "C'est comme avoir 10 ordinateurs différents à l'intérieur d'une seule machine physique.", vital: "Cela économise de l'argent et de l'espace." },
+            cyber: { title: "Cybersécurité", simple: "C'est mettre des verrous numériques pour empêcher les pirates de voler des données.", vital: "Une entreprise piratée peut faire faillite." },
+            reseaux: { title: "Réseaux TCP/IP", simple: "Ce sont les routes et les adresses postales qui permettent aux ordinateurs de se parler entre eux.", vital: "Sans réseau bien réglé, aucune donnée ne circule." },
+            glpi: { title: "GLPI / Ticketing", simple: "C'est le carnet de santé géant du matériel et le suivi des pannes.", vital: "Permet de savoir exactement quel PC appartient à qui." },
+            prtg: { title: "Supervision PRTG", simple: "C'est un écran de contrôle qui prévient dès qu'un serveur a de la 'fièvre'.", vital: "On répare le problème AVANT que les employés ne s'en aperçoivent." }
+        };
+        function openSkillModal(key) { const data = skillData[key]; document.getElementById('skill-title').textContent = data.title; document.getElementById('skill-simple').textContent = data.simple; document.getElementById('skill-vital').textContent = "Pourquoi c'est vital ? " + data.vital; document.getElementById('skill-modal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        function closeSkillModal() { document.getElementById('skill-modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+        function openModal(id) { document.getElementById('modal-' + id).style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        function closeModal(id) { document.getElementById('modal-' + id).style.display = 'none'; document.body.style.overflow = 'auto'; }
+        window.onclick = e => { if (e.target.classList.contains('modal-overlay')) { closeSkillModal(); closeModal('aldi'); closeModal('mitm'); closeModal('haproxy'); closeModal('prtg-ap'); closeModal('lamp'); closeModal('unyc'); closeModal('randstad'); closeModal('mma'); } };
+    </script>
+</body>
+</html>
